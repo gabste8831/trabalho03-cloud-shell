@@ -1,13 +1,16 @@
 # Trabalho 03 - Linux, Shell Script e Cloud Computing
 
 ## Aluno
-Gabriel
+* **Nome:** Gabriel
+* **Instituição:** Unidavi
+* **Curso:** Sistemas de Informação - 7ª Fase
+* **Disciplina:** Cloud Computing
 
 ## Tema
-**FreelaCloud** - Plataforma Freelance para Profissionais
+**FreelaCloud** - Plataforma Freelance para Profissionais de Tecnologia
 
 ## Descrição do Projeto
-O **FreelaCloud** é uma plataforma que conecta freelancers a clientes para contratação de projetos. No Trabalho 02, foi desenvolvida como uma aplicação containerizada em Next.js com banco PostgreSQL. 
+O **FreelaCloud** é uma plataforma que conecta freelancers a clientes para contratação de projetos. No Trabalho 02, ela foi desenvolvida como uma aplicação containerizada em Next.js com banco PostgreSQL.
 
 Neste Trabalho 03, simulamos o ambiente de DevOps da infraestrutura Linux do FreelaCloud. O projeto cria um ambiente isolado baseado em Ubuntu Server no Docker, simulando o servidor operacional que hospeda o portal estático da plataforma e executa rotinas administrativas essenciais através de Shell Script. Os scripts realizam atualizações de pacotes, deploy de novos builds do portal, monitoramento de saúde de CPU e RAM, criação de contas administrativas locais, backups compactados periódicos das vagas e portfólios, e relatórios operacionais exportáveis.
 
@@ -101,17 +104,18 @@ chmod +x *.sh
 ---
 
 ## Evidências
-As capturas de tela e evidências de execução estão localizadas na pasta [/evidencias](file:///c:/Users/gabri/Documentos/Faculdade/7a%20Fase/Cloud%20Computing/Trabalho%2003/trabalho03-cloud-shell/evidencias/).
+As capturas de tela e evidências de execução estão localizadas na pasta [/evidencias](./evidencias).
 
-*   `01_container_executando.png` - Container executando e portas mapeadas.
-*   `02_menu_principal.png` - Menu de interface de texto interativo em execução.
-*   `03_deploy_sucesso.png` - Deploy realizado e site acessível.
-*   `04_monitoramento_alertas.png` - Alertas de disco/memória no terminal.
-*   *(Outras imagens organizadas por tarefa na pasta de evidências)*
+*   `01_container_executando.png` - Container executando ativamente e portas mapeadas (docker ps).
+*   `02_menu_principal.png` - Menu DevOps de interface de texto interativa em execução.
+*   `03_01_site.png`, `03_02_site.png`, `03_03_site.png` - Telas do Painel de Controle web do FreelaCloud acessíveis via localhost:8080.
+*   `04_monitoramento.png` - Status de leitura do hardware e alertas gerados no terminal.
+*   `05_estrutura.png` - Árvore de diretórios e validação das permissões aplicadas.
+*   `06_relatorio_gerado.png` - Visualização do relatório operacional consolidado gerado automaticamente.
 
 ## DockerHub
 A imagem do aplicativo FreelaCloud está disponível em:
-*   [gabrielste/freelacloud-app (Docker Hub)](https://hub.docker.com/r/gabrielste/freelacloud-app)
+*   [gabrielste/trabalho03-cloud-shell (Docker Hub)](https://hub.docker.com/repository/docker/gabrielste/trabalho03-cloud-shell/general)
 
 ## Uso de IA
 - **Ferramenta utilizada**: Gemini (Google AI) incorporado via IDE.
