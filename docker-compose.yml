@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web-shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trabalho03-linux
+    ports:
+      - "8080:80"
+    volumes:
+      # Montar diretórios locais para persistir backups, logs e evidências gerados pelos scripts
+      - ./backups:/app/backups
+      - ./logs:/app/logs
+      - ./evidencias:/app/evidencias
+      - ./source:/app/source
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    restart: unless-stopped

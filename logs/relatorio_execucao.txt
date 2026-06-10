@@ -1,0 +1,58 @@
+=======================================================
+        RELATÓRIO OPERACIONAL DE INFRAESTRUTURA        
+=======================================================
+Projeto          : FreelaCloud
+Tema             : Plataforma Freelance para Profissionais
+Aluno            : Gabriel
+Instituição      : Unidavi
+Data e Hora      : 2026-06-10 22:35:13
+Container Host   : 55699a6c1697
+Endereço IP (Int): 172.20.0.2 
+-------------------------------------------------------
+
+1. ESPAÇO EM DISCO (SISTEMA DE ARQUIVOS):
+Filesystem      Size  Used Avail Use% Mounted on
+overlay        1007G  8.8G  947G   1% /
+
+2. USO DOS DIRETÓRIOS TEMÁTICOS (/app/freelacloud):
+4.0K	/app/freelacloud/backups
+8.0K	/app/freelacloud/contratos
+4.0K	/app/freelacloud/logs
+8.0K	/app/freelacloud/perfis
+8.0K	/app/freelacloud/vagas
+
+3. STATUS DO SERVIDOR HTTP APACHE:
+   Status : EM EXECUÇÃO (Ativo)
+   Versão : Server version: Apache/2.4.52 (Ubuntu)
+
+4. ÚLTIMOS BACKUPS COMPACTADOS GERADOS:
+   - backup_freelacloud_2026-06-10_22-34.tar.gz (725)
+
+5. REGISTROS DE LOGS RECENTES:
+   Últimos registros de monitoramento de hardware:
+     > [2026-06-10 22:34:52] [OK] Disco: 1%
+     > [2026-06-10 22:34:52] [OK] RAM: 13%
+     > [2026-06-10 22:34:52] [OK] CPU Load: 0.03
+     > [2026-06-10 22:34:52] [OK] Apache ativo
+
+6. ARQUIVOS DE FRONTEND PUBLICADOS (DEPLOY):
+   Status: Publicado com sucesso no Apache.
+   Lista de arquivos no Apache (/var/www/html):
+     - assets (Perm: drwxr-xr-x)
+     - index.html (Perm: -rwxr-xr-x)
+     - sobre.html (Perm: -rwxr-xr-x)
+
+7. USUÁRIOS E PERMISSÕES PRINCIPAIS:
+   Grupo Operacional (freela_ops):
+     Membros: freela_admin
+
+   Propriedades de arquivos em /app/freelacloud:
+     drwxrwx--- - Prop: freela_admin:freela_ops - /app/freelacloud
+     drwxrwx--- - Prop: freela_admin:freela_ops - /app/freelacloud/backups
+     drwxrwx--- - Prop: freela_admin:freela_ops - /app/freelacloud/contratos
+     drwxrwx--- - Prop: freela_admin:freela_ops - /app/freelacloud/logs
+     drwxrwx--- - Prop: freela_admin:freela_ops - /app/freelacloud/perfis
+     drwxrwx--- - Prop: freela_admin:freela_ops - /app/freelacloud/vagas
+=======================================================
+Fim do Relatório Operacional.
+=======================================================

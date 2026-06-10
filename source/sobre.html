@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreelaCloud - Sobre a Arquitetura</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- Menu de Navegação -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-dot"></div>
+        Freela<span>Cloud</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Painel Principal</a></li>
+          <li><a href="sobre.html" class="active">Sobre a Arquitetura</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">Arquitetura de Sistemas</div>
+      <h1>Como está desenhada a infraestrutura <span>FreelaCloud</span>?</h1>
+      <p class="lead">
+        Entenda o fluxo completo da aplicação conteinerizada original e a camada operacional Linux criada no Trabalho 03.
+      </p>
+    </section>
+
+    <!-- Detalhes da Arquitetura do Trabalho 2 -->
+    <section class="info-section">
+      <div class="info-box">
+        <h2>🛠️ Arquitetura do Trabalho 02 (Aplicação Original)</h2>
+        <p>
+          O <strong>FreelaCloud</strong> foi construído utilizando uma arquitetura de microserviços conteinerizada, composta por:
+        </p>
+        <ul>
+          <li style="margin-bottom: 0.8rem; margin-left: 1.5rem; color: var(--text-muted);">
+            <strong style="color: var(--text-highlight);">Container Frontend/Backend (app)</strong>: Desenvolvido com Node.js e Next.js (App Router), servindo a interface do usuário e as APIs internas na porta 3000.
+          </li>
+          <li style="margin-bottom: 0.8rem; margin-left: 1.5rem; color: var(--text-muted);">
+            <strong style="color: var(--text-highlight);">Container Banco de Dados (db)</strong>: Servidor relacional PostgreSQL 16 que armazena as vagas, perfis e vínculos contratuais.
+          </li>
+          <li style="margin-bottom: 0.8rem; margin-left: 1.5rem; color: var(--text-muted);">
+            <strong style="color: var(--text-highlight);">ORM Prisma</strong>: Abstração de banco que gera consultas tipadas e manipula migrações de esquema automáticas.
+          </li>
+          <li style="margin-bottom: 0.8rem; margin-left: 1.5rem; color: var(--text-muted);">
+            <strong style="color: var(--text-highlight);">pgdata (Volume Persistente)</strong>: Garante que os cadastros efetuados pelos usuários persistam localmente mesmo se os containers forem recriados.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Detalhes do Trabalho 3 -->
+      <div class="info-box">
+        <h2>🐳 Arquitetura do Trabalho 03 (Camada DevOps & Linux)</h2>
+        <p>
+          Neste Trabalho 03, simulamos a administração e o deploy das páginas institucionais de monitoramento do FreelaCloud.
+        </p>
+        <p>
+          Configuramos uma instância Linux baseada em <strong>Ubuntu Server</strong> no Docker, que roda o servidor de páginas web <strong>Apache (apache2)</strong>. O deploy é efetuado de forma limpa através de scripts Bash que copiam a build estática para a pasta root do Apache (<code style="font-family: monospace; color: var(--text-main);">/var/www/html</code>).
+        </p>
+        <p>
+          Além disso, para segurança, os scripts criam o usuário do sistema <code style="font-family: monospace; color: var(--text-main);">freela_admin</code> e o grupo <code style="font-family: monospace; color: var(--text-main);">freela_ops</code>, e utilizam regras de controle de acesso restrito (permissões 770) nas pastas sob <code style="font-family: monospace; color: var(--text-main);">/app/freelacloud/</code> para evitar vazamento de dados de vagas e perfis confidenciais.
+        </p>
+      </div>
+
+      <!-- Vantagens do Ambiente -->
+      <div class="info-box">
+        <h2>📊 Monitoramento e Segurança da Operação</h2>
+        <p>
+          O monitoramento contínuo coleta o consumo de CPU, memória RAM ocupada e espaço em disco livre. Se algum recurso exceder a marca de <strong>80%</strong> de consumo ou se o servidor Apache cair, alertas automáticos são exibidos em tela e arquivados nos arquivos de log persistentes.
+        </p>
+        <p>
+          Toda a saída operacional do ecossistema é consolidada no script de relatório e exportada diretamente para <code style="font-family: monospace; color: var(--text-main);">/app/logs/relatorio_execucao.txt</code>, servindo de auditoria para os engenheiros DevOps.
+        </p>
+      </div>
+    </section>
+
+    <!-- Botão de Voltar -->
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="index.html" class="btn btn-primary">&larr; Voltar ao Painel Principal</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Universidade - Gabriel - Trabalho 03 - Computação em Nuvem.</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Desenvolvido com fins didáticos baseado no tema FreelaCloud.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreelaCloud - Painel DevOps</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- Menu de Navegação -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-dot"></div>
+        Freela<span>Cloud</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Painel Principal</a></li>
+          <li><a href="sobre.html">Sobre a Arquitetura</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção Principal -->
+    <section class="hero">
+      <div class="badge">Trabalho 03 • Administração Linux</div>
+      <h1>Painel de Controle de Operações do <span>FreelaCloud</span></h1>
+      <p class="lead">
+        Simulador DevOps para gerenciamento da infraestrutura de hospedagem da plataforma freelance.
+        Configure usuários operacionais, monitore recursos e faça deploy automatizado.
+      </p>
+      <div class="cta-group">
+        <a href="#dashboard" class="btn btn-primary">Estatísticas do App</a>
+        <a href="#scripts-dev" class="btn btn-secondary">Executar Scripts</a>
+      </div>
+    </section>
+
+    <!-- Dashboard Estatístico (Simulação FreelaCloud) -->
+    <section id="dashboard" style="margin-bottom: 5rem;">
+      <h2 class="section-title">Indicadores da <span>Plataforma</span></h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        
+        <div class="card" style="text-align: center;">
+          <div class="card-content">
+            <h2 style="font-size: 2.5rem; font-family: 'Outfit'; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">142</h2>
+            <p>Freelancers Cadastrados</p>
+            <span class="card-meta">/app/freelacloud/perfis</span>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-content">
+            <h2 style="font-size: 2.5rem; font-family: 'Outfit'; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">37</h2>
+            <p>Vagas de Projetos Abertas</p>
+            <span class="card-meta">/app/freelacloud/vagas</span>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-content">
+            <h2 style="font-size: 2.5rem; font-family: 'Outfit'; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">18</h2>
+            <p>Contratos Ativos</p>
+            <span class="card-meta">/app/freelacloud/contratos</span>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-content">
+            <h2 style="font-size: 2.5rem; font-family: 'Outfit'; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">OK</h2>
+            <p>Apache HTTP Server</p>
+            <span class="card-meta">Porta 8080 (Ativa)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Grade de Scripts (Específica do FreelaCloud) -->
+    <section id="scripts-dev">
+      <h2 class="section-title">Automação de <span>Infraestrutura</span></h2>
+      <div class="grid">
+        
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">↻</div>
+            <h3>Atualização de Sistema</h3>
+            <p>Atualiza pacotes apt no container gravando relatórios de log de segurança.</p>
+            <span class="card-meta">01_update.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">🖧</div>
+            <h3>Servidor Apache</h3>
+            <p>Instala o Apache, inicializa o serviço e exibe a versão ativa.</p>
+            <span class="card-meta">02_apache.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">📁</div>
+            <h3>Pastas do FreelaCloud</h3>
+            <p>Provisiona os diretórios de vagas, perfis, logs e contratos do aplicativo.</p>
+            <span class="card-meta">03_estrutura.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">💾</div>
+            <h3>Backup dos Dados</h3>
+            <p>Gera um arquivo compactado tar.gz das pastas de vagas e perfis em backups/.</p>
+            <span class="card-meta">04_backup.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="z-index: 1;">🚀</div>
+          <div class="card-content">
+            <h3>Deploy do Site Estático</h3>
+            <p>Limpa e publica esta interface estática no diretório público do Apache.</p>
+            <span class="card-meta">05_deploy.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">⚙</div>
+            <h3>Processos e PIDs</h3>
+            <p>Lista processos do container e mata processos através de PIDs com segurança.</p>
+            <span class="card-meta">06_processos.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">📊</div>
+            <h3>Monitoramento Crítico</h3>
+            <p>Mede CPU, RAM, disco e Apache emitindo alertas caso passem de 80%.</p>
+            <span class="card-meta">07_monitoramento.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">👤</div>
+            <h3>Controle de Acesso</h3>
+            <p>Cria usuário freela_admin e grupo freela_ops com permissão restrita 770.</p>
+            <span class="card-meta">08_usuarios_permissoes.sh</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">📋</div>
+            <h3>Relatório DevOps</h3>
+            <p>Consolida todas as auditorias e logs salvando em logs/relatorio_execucao.txt.</p>
+            <span class="card-meta">09_relatorio.sh</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Instruções rápidas -->
+    <section class="info-section">
+      <div class="info-box">
+        <h2>Como gerenciar no container?</h2>
+        <p>Acesse o menu DevOps interativo para disparar os scripts sob demanda:</p>
+        <div class="code-container">
+          <div class="code-header">Comando Docker</div>
+          docker exec -it trabalho03-linux /app/scripts/menu.sh
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Universidade - Gabriel - Trabalho 03 - Computação em Nuvem.</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Desenvolvido com fins didáticos baseado no tema FreelaCloud.</p>
+  </footer>
+
+</body>
+</html>
