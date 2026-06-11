@@ -56,10 +56,9 @@ configurar_usuarios_permissoes_freelacloud() {
         echo -e "${GREEN}[✔] chown: Propriedade alterada para $usuario:$grupo em todos os arquivos de dados.${NC}"
 
         # chmod: define permissões restritas 770
-        # Justificativa Técnica: A pasta /app/freelacloud abriga vagas, perfis e contratos confidenciais da plataforma.
-        # Definir 770 garante que apenas o proprietário (freela_admin) e membros do grupo operacional (freela_ops)
-        # possam ler, escrever ou listar os dados, bloqueando qualquer outro usuário local não autorizado.
-        # Evitamos permissões abertas como 777 para preservar a integridade dos dados da nuvem.
+        # A pasta /app/freelacloud abriga vagas, perfis e contratos confidenciais da plataforma.
+        # definir 770 garante que apenas o proprietário e membros do grupo operacional possam ler, escrever ou listar os dados, 
+        # bloqueando qualquer outro usuário local não autorizado.
         chmod -R 770 "$TARGET_DIR"
         echo -e "${GREEN}[✔] chmod: Permissões redefinidas para 770 (Dono e Grupo total; Outros nenhum).${NC}"
     else
