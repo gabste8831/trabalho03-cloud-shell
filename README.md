@@ -115,7 +115,7 @@ As capturas de tela e evidências de execução estão localizadas na pasta [/ev
 
 ## DockerHub
 A imagem do aplicativo FreelaCloud está disponível em:
-*   [gabrielste/trabalho03-cloud-shell (Docker Hub)](https://hub.docker.com/repository/docker/gabrielste/trabalho03-cloud-shell/general)
+*   [gabrielste/trabalho03-cloud-shell (Docker Hub)](https://hub.docker.com/r/gabrielste/trabalho03-cloud-shell)
 
 ## Uso de IA
 - **Ferramenta utilizada**: Gemini (Google AI) incorporado via IDE.
