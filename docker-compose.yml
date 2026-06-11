@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web-shell:
     build:
@@ -15,5 +13,5 @@ services:
       - ./evidencias:/app/evidencias
       - ./source:/app/source
     stdin_open: true # docker run -i
-    tty: true        # docker run -t
+    tty: true # docker run -t
     restart: unless-stopped
