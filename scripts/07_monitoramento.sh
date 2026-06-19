@@ -12,7 +12,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-LOG_FILE="$BASE_DIR/logs/monitoramento.log"
+LOG_FILE="$BASE_DIR/logs/monitoramento_$(date +%Y-%m-%d).log"
 
 mkdir -p "$(dirname "$LOG_FILE")"
 
